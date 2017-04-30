@@ -20,9 +20,17 @@ dist/js/%.js: js/%.js
 	@mkdir -p $(dir $@)
 	./node_modules/.bin/browserify $< -o $@ -t [ babelify ]
 
+# Fonts
+
+fonts := $(patsubst node_modules/font-awesome/%,dist/%,$(shell find node_modules/font-awesome/fonts/fontawesome-webfont.* -type f))
+
+dist/fonts/%: node_modules/font-awesome/fonts/%
+	@mkdir -p $(dir $@)
+	cp $< $@
+
 # MAIN
 
-dist: dist/css/underline.min.css dist/js/underline.min.js ## Build for release
+dist: dist/css/underline.min.css dist/js/underline.min.js $(fonts) ## Build for release
 
 # Cleanup
 
