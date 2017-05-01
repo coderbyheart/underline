@@ -1,0 +1,31 @@
+a[href^='mailto:'] {
+  &::before {
+    @include fa-icon();
+    content: $fa-var-envelope-o;
+    padding-right: 0.25rem;
+  }
+}
+
+a[href^='tel:'] {
+  &::before {
+    @include fa-icon();
+    content: $fa-var-mobile;
+    padding-right: 0.25rem;
+  }
+}
+
+a[href^='https://twitter.com'] {
+  &::before {
+    @include fa-icon();
+    content: $fa-var-twitter;
+    padding-right: 0.25rem;
+  }
+}
+
+a[href^='https://www.facebook.com'] {
+  &::before {
+    @include fa-icon();
+    content: $fa-var-facebook-official;
+    padding-right: 0.25rem;
+  }
+}
