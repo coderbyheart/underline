@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="<%= config.lang %>">
 <head>
-  <%= include('head') %>
+  <%= include('meta') %>
   <title><%= content.title %> &middot; <%= config.appName %></title>
-  <%= include('head-socialmedia-index') %>
+  <%= include('head-socialmedia-page') %>
   <%= include('styles') %>
 </head>
 <body class="article">
@@ -21,7 +21,7 @@
         <%= content.content %>
       </section>
     </article>
-    <%= include('aside-workshops') %>
+    <%= include('aside') %>
   </div>
 </main>
 <%= include('footer') %>

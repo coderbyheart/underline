@@ -7,9 +7,9 @@
           <span>&middot; <%= config.shortDescription %></span>
         </div>
         <div>
-          <a href="" class="hide-not-scrolling <% if(build.identifier === 'index') { %>active<% } %>">Start</a>
+          <a href="" class="hide-not-scrolling <% if(build.identifier === 'index') { %>active<% } %>"><%= t('Home') %></a>
           <% collections['header-nav'].map(({slug, title}) => { %>
-          <a href="./<%= slug %>.html" class="hide-not-scrolling <% if(build.identifier === 'coaching') { %>active<% } %>"><%= title %></a>
+          <a href="./<%= slug %>/" class="hide-not-scrolling <% if(build.identifier === slug) { %>active<% } %>"><%= title %></a>
           <%}) %>
         </div>
       </section>
@@ -24,9 +24,9 @@
           </a>
         </div>
         <div>
-          <a href="" class="<% if(build.identifier === 'index') { %>active<% } %>">Start</a>
+          <a href="" class="<% if(build.identifier === 'index') { %>active<% } %>"><%= t('Home') %></a>
           <% collections['header-nav'].map(({slug, title}) => { %>
-          <a href="./<%= slug %>.html" class="<% if(build.identifier === 'coaching') { %>active<% } %>"><%= title %></a>
+          <a href="./<%= slug %>/" class="<% if(build.identifier === slug) { %>active<% } %>"><%= title %></a>
           <%}) %>
         </div>
       </section>

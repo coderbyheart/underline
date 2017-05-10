@@ -19,7 +19,7 @@
         <p>
           <small>
             <time datetime="<%= content.publicationDate %>"><%= shortDate(content.publicationDate) %></time>
-            von <a href="./<%= content.author.slug %>.html"><%= content.author.name %></a>
+            <%= t('by') %> <a href="./<%= content.author.slug %>/"><%= content.author.name %></a>
           </small>
         </p>
         <% if (content.hero) { %><img src="<%= content.hero.file.url %>?w=600&amp;h=400&amp;fit=thumb" alt="<%= content.subtitle %>: <%= content.title %>"><% } %>
@@ -29,34 +29,30 @@
       </section>
       <footer>
         <section class="sharing">
-          <h2>Teilen</h2>
-          <a class="share" href="https://facebook.com/sharer/sharer.php?u=<%= encodeURIComponent(page.url) %>" target="_blank" aria-label="Share on Facebook">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <span>Share on</span> <strong>Facebook</strong>
+          <h2><%= t('Share') %></h2>
+          <a class="share" href="https://www.facebook.com/sharer/sharer.php?u=<%= encodeURIComponent(page.url) %>" target="_blank" aria-label="<%= t('Share on ${platform}', {platform: 'Facebook'}) %>">
+            <span><%= t('Share on') %></span> <strong>Facebook</strong>
           </a>
 
-          <a class="share" href="https://twitter.com/intent/tweet/?text=<%= encodeURIComponent(config.description) %>&amp;url=<%= encodeURIComponent(page.url) %>" target="_blank" aria-label="Share on Twitter">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            <span>Share on</span> <strong>Twitter</strong>
+          <a class="share" href="https://twitter.com/intent/tweet/?text=<%= encodeURIComponent(config.description) %>&amp;url=<%= encodeURIComponent(page.url) %>" target="_blank" aria-label="<%= t('Share on ${platform}', {platform: 'Twitter'}) %>">
+            <span><%= t('Share on') %></span> <strong>Twitter</strong>
           </a>
 
-          <a class="share" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<%= encodeURIComponent(page.url) %>&amp;title=<%= encodeURIComponent(config.description) %>&amp;summary=<%= encodeURIComponent(config.description) %>&amp;source=<%= encodeURIComponent(page.url) %>" target="_blank" aria-label="Share on LinkedIn">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-            <span>Share on</span> <strong>LinkedIn</strong>
+          <a class="share" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<%= encodeURIComponent(page.url) %>&amp;title=<%= encodeURIComponent(config.description) %>&amp;summary=<%= encodeURIComponent(config.description) %>&amp;source=<%= encodeURIComponent(page.url) %>" target="_blank" aria-label="<%= t('Share on ${platform}', {platform: 'LinkedIn'}) %>">
+            <span><%= t('Share on') %></span> <strong>LinkedIn</strong>
           </a>
 
-          <a class="share" href="https://www.xing.com/app/user?op=share;url=<%= encodeURIComponent(page.url) %>;title=<%= encodeURIComponent(config.description) %>" target="_blank" aria-label="Share on XING">
-            <i class="fa fa-xing" aria-hidden="true"></i>
-            <span>Share on</span> <strong>XING</strong>
+          <a class="share" href="https://www.xing.com/app/user?op=share;url=<%= encodeURIComponent(page.url) %>;title=<%= encodeURIComponent(config.description) %>" target="_blank" aria-label="<%= t('Share on ${platform}', {platform: 'XING'}) %>">
+            <span><%= t('Share on') %></span> <strong>XING</strong>
           </a>
         </section>
         <section class="comments">
-          <h2>Kommentare</h2>
+          <h2><%= t('Comments') %></h2>
           <div id="disqus_thread"></div>
         </section>
       </footer>
     </article>
-    <%= include('aside-workshops') %>
+    <%= include('aside') %>
   </div>
 </main>
 <%= include('footer') %>

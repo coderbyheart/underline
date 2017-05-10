@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="<%= config.lang %>">
 <head>
-  <%= include('head') %>
+  <%= include('meta') %>
   <title><%= config.appName %></title>
   <%= include('head-socialmedia-index') %>
   <%= include('styles') %>
@@ -25,14 +25,14 @@
             <br><% } %>
             <%= collections.hero[0].title %>
           </h1>
-          <a href="./<%= collections.hero[0].slug %>.html" class="btn btn-outline-primary">
-            Lesen
+          <a href="./<%= collections.hero[0].slug %>/" class="btn btn-outline-primary">
+            <%= t('Read') %>
           </a>
         </div>
       </section>
       <nav>
         <% collections.hero.map(({slug, title, subtitle}) => { %>
-        <a href="./<%= slug %>.html">
+        <a href="./<%= slug %>/">
           <% if (subtitle) { %>
           <small><%= subtitle %></small>
           <br><% } %>
@@ -52,8 +52,9 @@
       <header>
         <% if (content.hero) { %>
         <a href="<%= page.url %>">
-          <img src="<%= content.hero.file.url %>?w=300&amp;h=200&amp;fit=thumb"
-               alt="<%= content.subtitle %>: <%= content.title %>">
+          <img
+            src="<%= content.hero.file.url %>?w=300&amp;h=200&amp;fit=thumb"
+            alt="<%= content.subtitle %>: <%= content.title %>">
         </a>
         <% } %>
         <h1 role="heading">
@@ -65,7 +66,7 @@
         <p>
           <small>
             <time datetime="<%= content.publicationDate %>"><%= shortDate(content.publicationDate) %></time>
-            von <a href="./<%= content.author.slug %>.html"><%= content.author.name %></a>
+            <%= t('by') %> <a href="./<%= content.author.slug %>/"><%= content.author.name %></a>
           </small>
         </p>
       </header>
@@ -73,7 +74,7 @@
         <%= content.abstract %>
       </section>
       <footer>
-        <a href="<%= page.url %>">ganzen Artikel lesen &raquo;</a>
+        <a href="<%= page.url %>"><%= t('Read the whole story') %> &raquo;</a>
       </footer>
     </article>
     <% }) %>

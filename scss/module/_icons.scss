@@ -1,31 +1,36 @@
-a[href^='mailto:'] {
+@mixin linkIcon($icon) {
   &::before {
     @include fa-icon();
-    content: $fa-var-envelope-o;
+    content: $icon;
     padding-right: 0.25rem;
   }
+}
+
+a[href^='mailto:'] {
+  @include linkIcon($fa-var-envelope-o);
 }
 
 a[href^='tel:'] {
-  &::before {
-    @include fa-icon();
-    content: $fa-var-mobile;
-    padding-right: 0.25rem;
-  }
+  @include linkIcon($fa-var-mobile);
 }
 
 a[href^='https://twitter.com'] {
-  &::before {
-    @include fa-icon();
-    content: $fa-var-twitter;
-    padding-right: 0.25rem;
-  }
+  @include linkIcon($fa-var-twitter);
 }
 
 a[href^='https://www.facebook.com'] {
-  &::before {
-    @include fa-icon();
-    content: $fa-var-facebook-official;
-    padding-right: 0.25rem;
-  }
+  @include linkIcon($fa-var-facebook-official);
+}
+
+a[href^='https://www.linkedin.com'] {
+  @include linkIcon($fa-var-linkedin);
+}
+
+a[href^='https://www.xing.com'] {
+  @include linkIcon($fa-var-xing);
+}
+
+
+a[href^='https://github.com'] {
+  @include linkIcon($fa-var-github);
 }
