@@ -4,7 +4,7 @@ import loadFont from 'meownica-web-fonts-loader'
 import $ from 'jquery'
 import {debounce} from 'lodash'
 
-loadFont('//fonts.googleapis.com/css?family=Roboto:300,400,700,900', 'webfont-loaded')
+loadFont('//fonts.googleapis.com/css?family=Roboto:300,400,900', 'webfont-loaded')
 
 const disqusId = $('meta[name=disqus]').attr('content')
 if (disqusId && document.getElementById('disqus_thread')) {
