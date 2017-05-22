@@ -34,15 +34,15 @@
             <span><%= t('Share on') %></span> <strong>Facebook</strong>
           </a>
 
-          <a class="share" href="https://twitter.com/intent/tweet/?text=<%= encodeURIComponent(config.description) %>&amp;url=<%= encodeURIComponent(page.url) %>" target="_blank" aria-label="<%= t('Share on ${platform}', {platform: 'Twitter'}) %>">
+          <a class="share" href="https://twitter.com/intent/tweet/?text=<%= encodeURIComponent(content.title) %>&amp;url=<%= encodeURIComponent(page.url) %>" target="_blank" aria-label="<%= t('Share on ${platform}', {platform: 'Twitter'}) %>">
             <span><%= t('Share on') %></span> <strong>Twitter</strong>
           </a>
 
-          <a class="share" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<%= encodeURIComponent(page.url) %>&amp;title=<%= encodeURIComponent(config.description) %>&amp;summary=<%= encodeURIComponent(config.description) %>&amp;source=<%= encodeURIComponent(page.url) %>" target="_blank" aria-label="<%= t('Share on ${platform}', {platform: 'LinkedIn'}) %>">
+          <a class="share" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<%= encodeURIComponent(page.url) %>&amp;title=<%= encodeURIComponent(content.title) %>&amp;summary=<%= encodeURIComponent(content.abstract) %>&amp;source=<%= encodeURIComponent(page.url) %>" target="_blank" aria-label="<%= t('Share on ${platform}', {platform: 'LinkedIn'}) %>">
             <span><%= t('Share on') %></span> <strong>LinkedIn</strong>
           </a>
 
-          <a class="share" href="https://www.xing.com/app/user?op=share;url=<%= encodeURIComponent(page.url) %>;title=<%= encodeURIComponent(config.description) %>" target="_blank" aria-label="<%= t('Share on ${platform}', {platform: 'XING'}) %>">
+          <a class="share" href="https://www.xing.com/app/user?op=share;url=<%= encodeURIComponent(page.url) %>;title=<%= encodeURIComponent(content.title) %>" target="_blank" aria-label="<%= t('Share on ${platform}', {platform: 'XING'}) %>">
             <span><%= t('Share on') %></span> <strong>XING</strong>
           </a>
         </section>
