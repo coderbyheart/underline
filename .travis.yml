@@ -7,6 +7,11 @@ notifications:
 node_js: node
 before_install:
 - npm i -g npm5@latest
+- npm install -g npm-install-peers
+install:
+- npm install
+- npm prune
+- npm-install-peers
 script:
 - npm run lint
 after_success:
