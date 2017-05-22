@@ -2,7 +2,7 @@
   "name": "@coderbyheart/underline",
   "version": "0.0.0-development",
   "description": "Bootstrap v4 website template",
-  "main": "js/underline.js",
+  "main": "dist/js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard",

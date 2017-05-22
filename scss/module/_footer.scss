@@ -8,7 +8,7 @@
 }
 body > footer {
   background-color: rgba(0, 0, 0, 0.90);
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(255, 255, 255, 0.85);
   width: 100%;
   article {
     @include sans-font();
@@ -25,7 +25,15 @@ body > footer {
         @include media-breakpoint-up(md) {
           @include make-col(4);
         }
-
+        &:last-child {
+          @include media-breakpoint-up(md) {
+            @include make-col(4);
+          }
+          @include media-breakpoint-up(lg) {
+            @include make-col-offset(1);
+            @include make-col(3);
+          }
+        }
       }
     }
     strong {

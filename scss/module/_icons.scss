@@ -30,7 +30,26 @@ a[href^='https://www.xing.com'] {
   @include linkIcon($fa-var-xing);
 }
 
-
 a[href^='https://github.com'] {
   @include linkIcon($fa-var-github);
+}
+
+a[href^='https://angel.co/'] {
+  @include linkIcon($fa-var-angellist);
+}
+
+a[href^='https://www.flickr.com/'] {
+  @include linkIcon($fa-var-flickr);
+}
+
+a[href^='https://www.amazon.'] {
+  @include linkIcon($fa-var-amazon);
+}
+
+a[href^='https://docs.google.com/presentation/'] {
+  @include linkIcon($fa-var-file-powerpoint-o);
+}
+
+a[href^='https://www.youtube.com/watch'] {
+  @include linkIcon($fa-var-youtube-play);
 }
