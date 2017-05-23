@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="<%= config.lang %>">
+<head>
+  <%= include('meta') %>
+  <title><%= t('Archive') %> &middot; <%= config.appName %></title>
+  <%= include('head-socialmedia-index') %>
+  <%= include('styles') %>
+</head>
+<body class="archive">
+
+<%= include('header') %>
+
+<main>
+  <div>
+    <article>
+      <header>
+        <h1><%= t('Archive') %></h1>
+      </header>
+      <section>
+        <% let lastYear = '' %>
+        <% content.posts.sort((a,b) => a.content.publicationDate < b.content.publicationDate).map(({content, page}) => { %>
+        <% const year = new Date(content.publicationDate).getFullYear(); if (year !== lastYear) { %><h2><%= year %></h2><% } lastYear = year %>
+        <p>
+          <a href="<%= page.url %>"><%= content.title %></a>
+          <% if (content.abstract) { %><br><%= striptags(content.abstract) %><% } %>
+        </p>
+        <% }) %>
+      </section>
+    </article>
+    <%= include('aside') %>
+  </div>
+</main>
+
+<%= include('footer') %>
+<%= include('script') %>
+</body>
+</html>

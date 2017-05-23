@@ -116,3 +116,11 @@ body.author > main {
     }
   }
 }
+
+body.archive > main {
+  article {
+    @include media-breakpoint-up(lg) {
+      @include make-col(8);
+    }
+  }
+}
