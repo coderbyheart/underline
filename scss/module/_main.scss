@@ -34,6 +34,22 @@ body > main {
         margin-top: 1rem;
       }
     }
+    &.preview {
+      header {
+        position: relative;
+        div {
+          position: absolute;
+          bottom: 1px;
+          left: 0;
+          padding: 15px;
+          background-color: rgba(#fff, 0.85);
+          width: 100%;
+        }
+        img {
+          filter: brightness(250%) grayscale(50%) opacity(75%);
+        }
+      }
+    }
   }
   aside {
     padding-top: 1rem;

@@ -48,27 +48,25 @@
   <div>
     <% content.posts.sort((a,b) => a.content.publicationDate < b.content.publicationDate).slice(0, 2).map(({content,
     page}) => { %>
-    <article>
+    <article class="preview">
       <header>
-        <% if (content.hero) { %>
-        <a href="<%= page.url %>">
-          <img
-            src="<%= content.hero.file.url %>?w=300&amp;h=200&amp;fit=thumb"
-            alt="<%= content.subtitle %>: <%= content.title %>">
-        </a>
-        <% } %>
-        <h1 role="heading">
-          <% if (content.subtitle) { %>
-          <small><%= content.subtitle %></small>
-          <br><% } %>
-          <%= content.title %>
-        </h1>
-        <p>
-          <small>
-            <time datetime="<%= content.publicationDate %>"><%= shortDate(content.publicationDate) %></time>
-            <%= t('by') %> <a href="./<%= content.author.slug %>/"><%= content.author.name %></a>
-          </small>
-        </p>
+        <img
+          src="<%= content.hero.file.url %>?w=300&amp;h=200&amp;fit=thumb"
+          alt="<%= content.subtitle %>: <%= content.title %>">
+        <div>
+          <h1>
+            <% if (content.subtitle) { %>
+            <small><%= content.subtitle %></small>
+            <br><% } %>
+            <%= content.title %>
+          </h1>
+          <p>
+            <small>
+              <time datetime="<%= content.publicationDate %>"><%= shortDate(content.publicationDate) %></time>
+              <%= t('by') %> <a href="./<%= content.author.slug %>/"><%= content.author.name %></a>
+            </small>
+          </p>
+        </div>
       </header>
       <section>
         <%= content.abstract %>
