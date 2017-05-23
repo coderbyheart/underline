@@ -18,13 +18,10 @@
     .slide {
       @include make-col-ready();
       @include make-col(12);
-      @include media-breakpoint-up(md) {
-        @include make-col(8);
-      }
       @include media-breakpoint-up(lg) {
         @include make-col(9);
       }
-      *[role=heading] {
+      h1 {
         small {
           color: $brand-primary;
           text-transform: uppercase;
@@ -48,10 +45,6 @@
   nav {
     @include make-col-ready();
     display: none;
-    @include media-breakpoint-up(md) {
-      display: flex;
-      @include make-col(4);
-    }
     @include media-breakpoint-up(lg) {
       display: flex;
       @include make-col(3);

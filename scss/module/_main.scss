@@ -22,7 +22,7 @@ body > main {
   }
   article {
     margin-bottom: 4rem;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       @include make-col(4);
     }
     h2 {
@@ -38,9 +38,6 @@ body > main {
   aside {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    @include media-breakpoint-up(md) {
-      @include make-col(4);
-    }
     @include media-breakpoint-up(lg) {
       @include make-col-offset(1);
       @include make-col(3);
@@ -78,11 +75,16 @@ body > main {
   a {
     color: darken($brand-primary, 10);
   }
+  > div {
+    header, footer {
+      @include make-col(12);
+    }
+  }
 }
 
 body.article > main {
   article {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       @include make-col(8);
     }
   }
@@ -90,7 +92,7 @@ body.article > main {
 
 body.author > main {
   article {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       @include make-col(8);
       img {
         width: 50%;
