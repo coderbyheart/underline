@@ -22,7 +22,10 @@
             <%= t('by') %> <a href="./<%= content.author.slug %>/"><%= content.author.name %></a>
           </small>
         </p>
-        <img src="<%= content.hero.file.url %>?w=600&amp;h=400&amp;fit=thumb" alt="<%= content.subtitle %>: <%= content.title %>">
+        <div class="photo">
+          <img src="<%= content.hero.file.url %>?w=600&amp;h=400&amp;fit=thumb" alt="<%= content.subtitle %>: <%= content.title %>">
+          <% if (content.hero.description) { %><div class="photocredits"><%= content.hero.description %></div><% } %>
+        </div>
       </header>
       <section>
         <%= content.content %>

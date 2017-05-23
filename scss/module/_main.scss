@@ -50,6 +50,22 @@ body > main {
         }
       }
     }
+    .photo {
+      position: relative;
+      .photocredits {
+        position: absolute;
+        bottom: 1rem;
+        right: 0;
+        font-size: 80%;
+        color: #fff;
+        background-color: #000;
+        opacity: 0.75;
+        padding: 0.5rem;
+        p {
+          margin: 0;
+        }
+      }
+    }
   }
   aside {
     padding-top: 1rem;
