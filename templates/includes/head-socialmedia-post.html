@@ -3,10 +3,10 @@
 <meta name="twitter:site" content="@<%= config.twitter %>"/>
 <meta name="twitter:title" content="<%= content.title %>"/>
 <meta name="twitter:description" content="<%= striptags(content.abstract) %>"/>
-<meta name="twitter:image" content="<% if (content.hero) { %>https:<%= content.hero.file.url %>?w=1200&amp;h=600&amp;fit=thumb<% } else { %><%= config.twitterImage %><% } %>"/>
+<meta name="twitter:image" content="https:<%= content.hero.file.url %>?w=1200&amp;h=600&amp;fit=thumb"/>
 <!-- Facebook OpenGraph Tags -->
 <meta property="og:url" content="<%= page.url %>"/>
 <meta property="og:type" content="article"/>
 <meta property="og:title" content="<%= content.title %>"/>
 <meta property="og:description" content="<%= striptags(content.abstract) %>"/>
-<meta property="og:image" content="<% if (content.hero) { %>https:<%= content.hero.file.url %>?w=1200&amp;h=600&amp;fit=thumb<% } else { %><%= config.twitterImage %><% } %>"/>
+<meta property="og:image" content="https:<%= content.hero.file.url %>?w=1200&amp;h=600&amp;fit=thumb"/>

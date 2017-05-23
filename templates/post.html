@@ -22,7 +22,7 @@
             <%= t('by') %> <a href="./<%= content.author.slug %>/"><%= content.author.name %></a>
           </small>
         </p>
-        <% if (content.hero) { %><img src="<%= content.hero.file.url %>?w=600&amp;h=400&amp;fit=thumb" alt="<%= content.subtitle %>: <%= content.title %>"><% } %>
+        <img src="<%= content.hero.file.url %>?w=600&amp;h=400&amp;fit=thumb" alt="<%= content.subtitle %>: <%= content.title %>">
       </header>
       <section>
         <%= content.content %>
