@@ -18,7 +18,7 @@
       </header>
       <section>
         <% let lastYear = '' %>
-        <% content.posts.sort((a,b) => a.content.publicationDate < b.content.publicationDate).map(({content, page}) => { %>
+        <% content.posts.sort((a,b) => a.content.publicationDate > b.content.publicationDate ? -1 : 1).map(({content, page}) => { %>
         <% const year = new Date(content.publicationDate).getFullYear(); if (year !== lastYear) { %><h2><%= year %></h2><% } lastYear = year %>
         <p>
           <a href="<%= page.url %>"><%= content.title %></a>

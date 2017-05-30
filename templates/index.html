@@ -46,7 +46,7 @@
 
 <main>
   <div>
-    <% content.posts.sort((a,b) => a.content.publicationDate < b.content.publicationDate).slice(0, 2).map(({content,
+    <% content.posts.sort((a,b) => a.content.publicationDate > b.content.publicationDate ? -1 : 1).slice(0, 2).map(({content,
     page}) => { %>
     <article class="preview">
       <header>
