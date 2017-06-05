@@ -10,10 +10,10 @@ before_install:
 - npm install -g npm-install-peers
 install:
 - npm install
-- npm prune
 - npm-install-peers
 script:
 - npm run lint
+- make dist
 after_success:
 - npm run semantic-release
 branches:

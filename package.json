@@ -8,8 +8,7 @@
     "lint": "standard",
     "precommit": "npm run lint",
     "commitmsg": "validate-commit-msg",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "prepare": "make dist"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
