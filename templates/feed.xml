@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><%= config.appName %></title>
+    <description><%= config.description %></description>
+    <link><%= config.webHost %></link>
+    <atom:link href="<%= config.webHost %><%= config.baseHref %>feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate><%= new Date(build.time).toUTCString() %></pubDate>
+    <lastBuildDate><%= new Date(build.time).toUTCString() %></lastBuildDate>
+    <generator>https://github.com/coderbyheart/underline</generator>
+    <% content.posts.sort((a,b) => a.content.publicationDate > b.content.publicationDate ? -1 : 1).slice(0, 10).map(({content,
+    page}) => { %>
+    <item>
+      <title><% if (content.subtitle) { %><%= content.subtitle %>: <% } %><%= content.title %></title>
+      <description><%= content.abstract %></description>
+      <pubDate><%= new Date(content.publicationDate).toUTCString() %></pubDate>
+      <link><%= page.url %></link>
+      <guid isPermaLink="true"><%= page.url %></guid>
+    </item>
+    <% }) %>
+  </channel>
+</rss>
