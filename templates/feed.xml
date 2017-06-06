@@ -12,7 +12,7 @@
     page}) => { %>
     <item>
       <title><% if (content.subtitle) { %><%= content.subtitle %>: <% } %><%= content.title %></title>
-      <description><%= content.abstract %></description>
+      <description><![CDATA[<%= content.abstract %>]]></description>
       <pubDate><%= new Date(content.publicationDate).toUTCString() %></pubDate>
       <link><%= page.url %></link>
       <guid isPermaLink="true"><%= page.url %></guid>
