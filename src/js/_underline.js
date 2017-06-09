@@ -9,6 +9,10 @@ export const underline = () => {
 
   const disqusId = $('meta[name=disqus]').attr('content')
   if (disqusId && document.getElementById('disqus_thread')) {
+    window.disqus_config = function () {
+      this.page.url = $('link[rel=canonical]').attr('href')
+      this.page.identifier = disqusId
+    }
     const s = document.createElement('script')
     s.src = `https://${disqusId}.disqus.com/embed.js`
     s.setAttribute('data-timestamp', +new Date())
