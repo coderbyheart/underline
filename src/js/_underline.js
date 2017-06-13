@@ -11,7 +11,7 @@ export const underline = () => {
   if (disqusId && document.getElementById('disqus_thread')) {
     window.disqus_config = function () {
       this.page.url = $('link[rel=canonical]').attr('href')
-      this.page.identifier = disqusId
+      this.page.identifier = $('meta[name=identifier]').attr('content')
     }
     const s = document.createElement('script')
     s.src = `https://${disqusId}.disqus.com/embed.js`
