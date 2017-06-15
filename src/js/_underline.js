@@ -5,6 +5,12 @@ import $ from 'jquery'
 import { debounce } from 'lodash'
 
 export const underline = () => {
+  const $window = $(window)
+  const $body = $(document.body)
+
+  loadFont($('link[rel=deferred-stylesheet]').attr('href'), 'styles-loaded', () => {
+    $body.removeClass('unstyled')
+  })
   loadFont('//fonts.googleapis.com/css?family=Roboto:300,400,900', 'webfont-loaded')
 
   const disqusId = $('meta[name=disqus]').attr('content')
@@ -19,8 +25,6 @@ export const underline = () => {
     document.body.appendChild(s)
   }
 
-  const $window = $(window)
-  const $body = $(document.body)
   $body.addClass('not-scrolling')
   const setScrollClass = () => {
     if ($window.scrollTop() > 0) {
