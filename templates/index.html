@@ -6,13 +6,13 @@
   <%= include('head-socialmedia-index') %>
   <%= include('critical-styles') %>
 </head>
-<body class="unstyled">
+<body class="critical">
 
 <%= include('header') %>
 
 <aside id="hero">
   <% if (collections.hero[0].hero) { %>
-  <div class="bg" style="background-image: url('<%= collections.hero[0].hero.file.url %>?w=1200')">
+  <div class="bg responsive-bg-image" style="background-image: url('<%= collections.hero[0].hero.file.url %>?w=120')">
   </div>
   <% } %>
   <div class="container">
@@ -51,7 +51,9 @@
     <article class="preview">
       <header>
         <img
-          src="<%= content.hero.file.url %>?w=300&amp;h=200&amp;fit=thumb"
+          src="<%= content.hero.file.url %>?w=30&amp;h=20&amp;fit=thumb"
+          width="300" height="200"
+          class="responsive"
           alt="<%= content.subtitle %>: <%= content.title %>">
         <div>
           <h1>

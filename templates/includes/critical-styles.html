@@ -1,13 +1,85 @@
 <style type="text/css">
-  body.unstyled header, body.unstyled main, body.unstyled > footer { max-width: 960px; margin: 0 auto; }
-  body.unstyled header img { width: 25%; }
-  body.unstyled #metanav div div:nth-child(1) { float: left; }
-  body.unstyled #metanav div div:nth-child(2) { float: right; }
-  body.unstyled #mainnav div div:nth-child(1) { float: left; clear: both; }
-  body.unstyled #mainnav div div:nth-child(2) { display: none; }
-  body.unstyled #hero, body.unstyled section.sharing { display: none;}
-  body.unstyled main article img { width: 100%; }
-  body.unstyled main aside img { width: 33%; float: right; margin-left: 1rem; max-width: 250px; }
-  body.unstyled > footer section div { width: 48%; float: left; margin-right: 2%; }
-  body.unstyled > footer .logo { display: none; }
+  body.critical {
+    margin: 0; }
+  body.critical a {
+    color: #27d7e7; }
+  body.critical > header #wrapmetanav {
+    background-color: #000; }
+  body.critical > header #metanav {
+    max-width: 960px;
+    margin: 0 auto;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 10px; }
+  body.critical > header #metanav a {
+    color: #fff;
+    text-decoration: none; }
+  body.critical > header #metanav > div {
+    padding: 15px; }
+  body.critical > header #metanav > div > div:first-child span {
+    display: none; }
+  body.critical > header #metanav > div > div:nth-child(2) {
+    display: none; }
+  body.critical > header #wrapmainnav {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  body.critical > header #mainnav {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-bottom: 15px; }
+  body.critical > header #mainnav::after {
+    display: block;
+    content: "";
+    clear: both; }
+  body.critical > header #mainnav .logo {
+    width: 100%;
+    margin-bottom: 15px;
+    max-width: 180px; }
+  body.critical > header #mainnav a {
+    color: rgba(0, 0, 0, 0.85);
+    text-decoration: none;
+    text-transform: uppercase; }
+  body.critical > header #mainnav a[rel=index] {
+    display: none; }
+  body.critical > header #mainnav > div {
+    padding: 15px; }
+  body.critical > header #mainnav > div > div:first-child {
+    float: left; }
+  body.critical > header #mainnav > div > div:nth-child(2) {
+    float: right; }
+  body.critical > header #mainnav > div > div:nth-child(2) a {
+    padding: 15px; }
+  body.critical #hero {
+    display: none; }
+  body.critical > main {
+    max-width: 960px;
+    margin: 0 auto; }
+  body.critical > main article {
+    padding: 15px;
+    margin-bottom: 50px; }
+  body.critical > main article img {
+    width: 100%;
+    height: auto; }
+  body.critical > main aside {
+    padding: 15px;
+    margin-bottom: 50px; }
+  body.critical > main aside img {
+    width: 25%;
+    margin-left: 1rem;
+    float: right;
+    height: auto; }
+  body.critical > footer {
+    background-color: #000;
+    padding: 15px;
+    color: rgba(255, 255, 255, 0.85); }
+  body.critical > footer .logo {
+    width: 100%;
+    height: auto; }
+  body.critical > footer hr {
+    width: 100%;
+    border: 0; }
+  body.critical > footer hr:after {
+    content: ' ';
+    border-bottom: 1px solid rgba(39, 215, 231, 0.5);
+    width: 45px;
+    display: block; }
 </style>

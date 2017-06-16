@@ -16,9 +16,12 @@ dist/underline.min.js: dist/underline.js
 	@mkdir -p $(dir $@)
 	./node_modules/.bin/uglifyjs $< -o $@
 
-dist/underline.js: src/underline.js
+dist/underline.js: src/underline.js src/js/*.js
 	@mkdir -p $(dir $@)
 	./node_modules/.bin/browserify $< -o $@ -t [ babelify ]
+
+dist/js:
+	./node_modules/.bin/babel src/js -d dist/js
 
 # Fonts
 
@@ -30,8 +33,7 @@ dist/fonts/%: node_modules/font-awesome/fonts/%
 
 # MAIN
 
-dist: dist/css/underline.min.css dist/underline.min.js $(fonts) ## Build for release
-	./node_modules/.bin/babel src/js -d dist/js
+dist: dist/css/underline.min.css dist/css/critical.css dist/underline.min.js $(fonts) dist/js ## Build for release
 
 # Cleanup
 

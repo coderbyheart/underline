@@ -6,7 +6,7 @@
   <%= include('head-socialmedia-post') %>
   <%= include('critical-styles') %>
 </head>
-<body class="unstyled article">
+<body class="critical article">
 <%= include('header') %>
 <main>
   <div>
@@ -23,7 +23,11 @@
           </small>
         </p>
         <div class="photo">
-          <img src="<%= content.hero.file.url %>?w=600&amp;h=400&amp;fit=thumb" alt="<%= content.subtitle %>: <%= content.title %>">
+          <img
+            src="<%= content.hero.file.url %>?w=60&amp;h=40&amp;fit=thumb"
+            width="600" height="400"
+            class="responsive"
+            alt="<%= content.subtitle %>: <%= content.title %>">
           <% if (content.hero.description) { %><div class="photocredits"><%= content.hero.description %></div><% } %>
         </div>
       </header>
