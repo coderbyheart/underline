@@ -47,9 +47,9 @@
     "node-sass": "^4.3.0",
     "node-static": "^0.7.9",
     "semantic-release": "^6.3.2",
-    "standard": "^8.6.0",
-    "uglify-js": "^3.0.10",
-    "uglifycss": "^0.0.25",
+    "standard": "^10.0.2",
+    "uglify-js": "^3.0.18",
+    "uglifycss": "0.0.27",
     "validate-commit-msg": "^2.10.1"
   },
   "files": [
