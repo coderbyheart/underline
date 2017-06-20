@@ -16,7 +16,7 @@ export class HnShare extends React.Component {
   }
 
   fetchHnStats () {
-    return fetch(`http://hn.algolia.com/api/v1/search?query=${encodeURIComponent(this.url)}&tags=story`)
+    return fetch(`https://hn.algolia.com/api/v1/search?query=${encodeURIComponent(this.url)}&tags=story`)
       .then(response => response.json())
       .then(({hits}) => {
         if (!hits[0]) return
