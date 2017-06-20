@@ -53,3 +53,7 @@ a[href^='https://docs.google.com/presentation/'] {
 a[href^='https://www.youtube.com/watch'] {
   @include linkIcon($fa-var-youtube-play);
 }
+
+a[href^='https://news.ycombinator.com/'] {
+  @include linkIcon($fa-var-hacker-news);
+}

@@ -66,6 +66,35 @@
     }
   }
 
+  &[href^="https://news.ycombinator.com/"] {
+    background-color: #ff6600;
+    &:hover {
+      background-color: lighten(#ff6600, 20%)
+    }
+  }
 }
 
-
+#hnshare {
+  dl {
+    margin-top: 0.5rem;
+    font-size: 85%;
+    float: left;
+    color: #f60;
+    dt {
+      display: none;
+    }
+    dd {
+      margin: 0;
+      &:before {
+        @include fa-icon();
+        content: $fa-var-caret-up;
+        padding-right: 0.25rem;
+      }
+    }
+    dd:last-child {
+      &:before {
+        content: $fa-var-comments;
+      }
+    }
+  }
+}

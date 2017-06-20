@@ -3,6 +3,9 @@
 import loadFont from 'meownica-web-fonts-loader'
 import $ from 'jquery'
 import {debounce} from 'lodash'
+import {HnShare} from './hn-share'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 /**
  * @param {object} el
@@ -19,6 +22,8 @@ const shouldBeShown = el => {
 export const underline = () => {
   const $window = $(window)
   const $body = $(document.body)
+  const canonicalUrl = $('link[rel=canonical]').attr('href')
+  const title = $('meta[name="twitter:title"]').attr('content')
 
   // Load extras
   loadFont($('link[rel=deferred-stylesheet]').attr('href'), 'styles-loaded', () => {
@@ -41,7 +46,6 @@ export const underline = () => {
       img.src = url.href
     })
     const b = responsiveBackgroundImages.map((el, index) => {
-      console.log(el, shouldBeShown(el))
       if (!shouldBeShown(el)) return
       responsiveBackgroundImages.splice(index, 1)
       const url = new URL(el.style.backgroundImage.match(/url\("([^"]+)"\)/)[1], window.location.href)
@@ -59,7 +63,7 @@ export const underline = () => {
   if (disqusId && disqusThread) {
     hasDisqus = true
     window.disqus_config = function () {
-      this.page.url = $('link[rel=canonical]').attr('href')
+      this.page.url = canonicalUrl
       this.page.identifier = $('meta[name=identifier]').attr('content')
     }
   }
@@ -102,4 +106,12 @@ export const underline = () => {
   $(() => {
     setScrollClass()
   })
+
+  const hnshare = document.getElementById('hnshare')
+  if (hnshare) {
+    ReactDOM.render(
+      <HnShare url={canonicalUrl} title={title} label={hnshare.getAttribute('data-label')} />,
+      hnshare
+    )
+  }
 }
