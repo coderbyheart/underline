@@ -66,6 +66,15 @@ body > main {
         }
       }
     }
+    blockquote {
+      padding: 1rem;
+      font-family: serif;
+      border-left: 5px solid rgba(0, 0, 0, 0.15);
+      background-color: rgba(0, 0, 0, 0.05);
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
   aside {
     padding-top: 1rem;
