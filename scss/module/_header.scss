@@ -33,7 +33,7 @@
       padding-bottom: 0.75rem;
       em {
         font-style: normal;
-        color: $brand-primary;
+        color: theme-color("primary");
       }
       a + a {
         padding: 0;
@@ -68,11 +68,11 @@
   a {
     color: rgba(0, 0, 0, 0.85);
     &.active {
-      color: $brand-primary;
+      color: theme-color("primary");
     }
     &:hover {
       text-decoration: none;
-      color: $brand-primary;
+      color: theme-color("primary");
     }
     & + a {
       margin-left: 1rem;

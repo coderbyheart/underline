@@ -1,7 +1,7 @@
 @mixin border-bottom() {
   &:after {
     content: ' ';
-    border-bottom: 1px solid rgba($brand-primary, 0.5);
+    border-bottom: 1px solid rgba(theme-color("primary"), 0.5);
     width: 45px;
     display: block;
     margin-bottom: 1rem;
@@ -80,7 +80,7 @@ body > main {
     padding-top: 1rem;
     padding-bottom: 1rem;
     @include media-breakpoint-up(lg) {
-      @include make-col-offset(1);
+      margin-left: auto !important;
       @include make-col(3);
     }
     footer {
@@ -94,7 +94,7 @@ body > main {
     small {
       font-weight: 900;
       text-transform: uppercase;
-      color: darken($brand-primary, 10);
+      color: darken(theme-color("primary"), 10);
       font-size: 50%;
     }
   }
@@ -114,7 +114,7 @@ body > main {
     }
   }
   a {
-    color: darken($brand-primary, 10);
+    color: darken(theme-color("primary"), 10);
   }
   > div {
     header, footer {

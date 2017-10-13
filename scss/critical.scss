@@ -4,7 +4,7 @@ body.critical {
   font-family: Arial, sans-serif;
   margin: 0;
   a {
-    color: $brand-primary;
+    color: $blue;
   }
   > header {
     #wrapmetanav {
@@ -109,7 +109,7 @@ body.critical {
       border: 0;
       &:after {
         content: ' ';
-        border-bottom: 1px solid rgba($brand-primary, 0.5);
+        border-bottom: 1px solid rgba($blue, 0.5);
         width: 45px;
         display: block;
       }
