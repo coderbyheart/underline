@@ -5,8 +5,8 @@
     <description><%= config.description %></description>
     <link><%= config.webHost %></link>
     <atom:link href="<%= config.webHost %><%= config.baseHref %>feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate><%= new Date(build.time).toUTCString() %></pubDate>
-    <lastBuildDate><%= new Date(build.time).toUTCString() %></lastBuildDate>
+    <pubDate><%= new Date().toUTCString() %></pubDate>
+    <lastBuildDate><%= new Date().toUTCString() %></lastBuildDate>
     <generator>https://github.com/coderbyheart/underline</generator>
     <% content.posts.sort((a,b) => a.content.publicationDate > b.content.publicationDate ? -1 : 1).slice(0, 10).map(({content,
     page}) => { %>
