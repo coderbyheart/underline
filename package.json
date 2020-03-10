@@ -26,14 +26,15 @@
   },
   "homepage": "https://github.com/coderbyheart/underline#readme",
   "dependencies": {
-    "bootstrap": "^4.0.0-beta",
+
+    "bootstrap": "^4.4.1",
     "contentful": "^7.13.1",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.2.1",
+    "jquery": "^3.4.1",
     "meownica-web-fonts-loader": "^1.2.1",
-    "popper.js": "^1.12.5",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "popper.js": "^1.16.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^4.1.1",
