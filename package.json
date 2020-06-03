@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/coderbyheart/underline#readme",
   "dependencies": {
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^4.5.0",
     "contentful": "^7.14.4",
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.0",
