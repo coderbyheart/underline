@@ -29,7 +29,7 @@
   "homepage": "https://github.com/coderbyheart/underline#readme",
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "contentful": "^7.14.4",
+    "contentful": "^7.14.5",
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.0",
     "meownica-web-fonts-loader": "^1.2.1",
