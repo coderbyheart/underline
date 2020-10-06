@@ -4,9 +4,7 @@ cache:
   - node_modules
 notifications:
   email: false
-node_js: '8'
-before_install:
-- npm i -g npm5@latest
+node_js: 'node'
 script:
 - npm run lint
 - make dist
